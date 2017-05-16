@@ -1,0 +1,334 @@
+			<div class="tourist-package_slider-container">
+
+				<div data-uk-slideshow="autoplay:true" class="uk-slideshow" id="order-package-carousel" style="height: 200px;">
+					<div class="item" *ngFor="let image of item.package.hotel.images">
+						<img alt="" [src]="image && image.link || ''">
+					</div>
+				</div>
+
+			</div>
+
+		<div class="" role="content">
+            <div class="container" [class.hidden]="submitted">
+
+                <div class="tourist-package">
+
+
+
+                    <div class="row tourist-package_body">
+
+                        <div class="col-md-9">
+
+                            <a href="/{{ lang }}/package-list" class="btn btn-primary btn-ghost btn-left">{{ ml.newSearch | ml }}</a>
+
+                            <h1>{{ item.package.title | ml }}</h1>
+
+                            <div class="tourist-package_date-line">
+                                <span class="tourist-package_date">{{ item.departureDate | date: 'dd.MM.yyyy' }} > {{ item.returnDate | date: 'dd.MM.yyyy' }} ({{ item.package.duration }} nights)</span>
+                                <a class="datepicker-link" role="button" data-toggle="collapse" href="#tour123_datepicker" aria-expanded="false">other dates for this tour</a>
+                                <div style="position:relative" >
+                                    <div id="tour123_datepicker" class="popover bottom datepicker-container collapse" role="tooltip"><div class="arrow"></div><div class="popover-content">
+                                    <div class="tour_datepicker"></div>
+                                    </div></div>
+                                </div>
+                            </div>
+
+                            <div class="tourist-package_hotel">
+                                <h3>{{ item.package.hotel.title | ml}}</h3>
+                                <div class="tourist_package_hotel_head row">
+                                    <div class="col-md-10">
+                                        <h4> &nbsp;
+                                            <span class="rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-2">
+                                        Tripadvisor rating
+                                    </div>
+                                </div>
+
+                                <div class="tourist-package_hotel-description" [innerHTML]="item.package.hotel.content | ml">  </div>
+
+                                <h3>Hotel facilities</h3>
+
+                                <ul>
+                                    <li>Free WiFi</li>
+                                    <li>Free parking</li>
+                                    <li>Restaurant</li>
+                                    <li>Room service</li>
+                                    <li>Facilities for disabled</li>
+                                </ul>
+
+
+                                <div class="tourist-package_hotel-options-list">
+
+
+									<div *ngFor="let room of item.package.hotel.rooms">
+                                    <div class="option-bar tourist-package_hotel-option" [class.selected]="room === item.room" (click)="item.room = room">
+
+                                        <div class="row option-bar_content">
+
+                                            <div class="col-md-3 option-bar_image">
+                                                <div class="">
+                                                    <a href=""><img [src]="room.image && room.image.link || ''" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-7">
+
+                                                <div class="option-bar_description">
+                                                    <h5 class="option-bar_title">{{ room.title | ml }}</h5>
+
+                                                    <div class="text" [innerHTML]="room.content | ml"></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-2 option-bar_pricing">
+
+                                                <div class="option-bar-item_price">
+                                                    <div class="price">{{ room.cost | currency:exchangeRate | number:'1.2-2' }} <span class="currency">{{currency}}</span></div>
+                                                    <div class="lbl">per person</div>
+                                                </div>
+
+
+                                                <a href="" class="btn btn-info btn-ghost btn-option-choose">Chose this</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <h2>Upgrade your package</h2>
+
+									<div *ngFor="let option of item.package.hotel.options">
+                                    <div class="option-bar tourist-package_hotel-option" [class.selected]="option.enable" (click)="option.enable = !option.enable">
+
+                                        <div class="row option-bar_content">
+
+                                            <div class="col-md-10">
+
+                                                <div class="option-bar_description">
+                                                    <h5 class="option-bar_title">{{ option.title | ml }}</h5>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-2 option-bar_pricing">
+
+                                            	  <div class="option-bar-item_price">
+                                                    <div class="price">{{ option.cost | currency:exchangeRate | number:'1.2-2' }} <span class="currency">{{currency}}</span></div>
+                                                    <div class="lbl">per tour</div>
+                                                </div>
+
+
+                                                <a href="" class="btn btn-info btn-ghost btn-option-choose">Chose this</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <aside class="widget tour-details sticky-widget" id="order-details">
+                                <header class="widget_header">
+                                    {{ml.orderDetails | ml }}
+                                </header>
+
+                                <div class="widget_section-header tour-trip">
+                                    <i class="ico ico_boat"></i>
+                                    <b>Trip</b>
+
+                                    <a class="widget_toggle-btn" role="button" data-toggle="collapse" href="#tour-trip_details" aria-expanded="true"><span class="caret"></span></a>
+
+                                </div>
+
+                                <div class="widget_section-body tour-trip_details collapse in" id="tour-trip_details">
+                                    <div class="order-trip_detail widget_line">
+                                        <div class="lbl">Outbound</div>
+                                        <div class="val">{{ item.departureDate | date: 'dd.MM.yyyy' }}</div>
+                                    </div>
+                                    <div class="order-trip_outbound">{{ item.package.pointA.title | ml }} &rarr; {{ item.package.pointB.title | ml }}</div>
+
+                                    <div class="order-trip_detail widget_line">
+                                        <div class="lbl">Return</div>
+                                        <div class="val">{{ item.returnDate | date: 'dd.MM.yyyy' }}</div>
+                                    </div>
+                                    <div class="order-trip_outbound">{{ item.package.pointB.title | ml }} &rarr; {{ item.package.pointA.title | ml }}</div>
+
+                                </div>
+
+                                <div class="widget_section-header tour-hotel">
+                                    <i class="ico ico_hotel"></i>
+                                    <b>Hotel</b>
+                                    <a class="widget_toggle-btn" role="button" data-toggle="collapse" href="#order-trip_details" aria-expanded="false"><span class="caret"></span></a>
+                                </div>
+
+                                <div class="widget_section-body order-trip_details collapse" id="order-trip_details">
+                                    <div class="order-trip_detail widget_line">
+                                        <b>Hotel Eden Rock Hotel Namaa Bay</b>
+                                    </div>
+                                    <div class="order-trip_detail widget_line">
+                                        <b>1 Bedroom Apartment <br>
+                                            (2 adults)</b>
+                                    </div>
+                                </div>
+
+                                <div class="widget_section-header tour-upgrades">
+                                    <i class="ico ico_hotel"></i>
+                                    <b>Upgrades</b>
+                                    <a class="widget_toggle-btn" role="button" data-toggle="collapse" href="#upgrades_details" aria-expanded="false"><span class="caret"></span></a>
+                                </div>
+
+                                <div class="widget_section-body collapse" id="upgrades_details">
+                                    <div class="order-trip_detail widget_line">
+                                        <div class="lbl">Sea view</div>
+                                        <div class="val">$20</div>
+                                    </div>
+                                </div>
+
+                                <div class="widget_section-header tour-tours">
+                                    <i class="ico ico_tour"></i>
+                                    <b>Tours</b>
+                                    <a class="widget_toggle-btn" role="button" data-toggle="collapse" href="#tours_details" aria-expanded="false"><span class="caret"></span></a>
+                                </div>
+
+                                <div class="widget_section-body collapse" id="tours_details">
+                                    <div class="order-trip_detail widget_line">
+                                        <div class="lbl">Cairo day tour</div>
+                                        <div class="val">$50</div>
+                                    </div>
+                                </div>
+
+                                <footer class="widget_footer">
+
+                                    <form action="">
+
+                                        <p class="widget-label"><b>Number of guests</b></p>
+
+                                        <div class="row">
+                                        	<div class="col-md-4 form-group" *ngFor="let pc of peopleCount">
+                                       			<label for="rf">{{pc.ageGroup.title | ml}}</label>
+                                       			<input type="number" min="0" class="form-control" [(ngModel)]="pc.count" [ngModelOptions]="{standalone: true}" (change)="regenPeople()">
+                                   			 </div>
+                                        </div>
+
+                                        <p class="widget-label"><b>Price</b> (per person)</p>
+
+                                        <div class="widget_section-body">
+											<div class="widget_line" *ngFor="let peopleCount of item.peopleCount">
+												<div class="lbl">{{ peopleCount.ageGroup.title | ml }}</div>
+												<div class="val">{{ peopleCount.count }}&nbsp;x&nbsp;{{ (item.price.getCost(peopleCount.ageGroup) || 0) | currency:exchangeRate | number:'1.2-2' }}{{currency}}</div>
+											</div>
+                                        </div>
+
+                                        <div class="tour-details_summary">
+                                            <div class="tour-details_summary_line">
+                                                <div class="lbl">Tickets cost</div>
+                                                <div class="val">{{ item.roadCost | currency:exchangeRate | number:'1.2-2' }} <span class="currency">{{currency}}</span></div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tour-details_summary">
+                                            <div class="tour-details_summary_line">
+
+                                                <div class="lbl">Hotel cost</div>
+                                                <div class="val">{{ item.hotelCost | currency:exchangeRate | number:'1.2-2' }} <span class="currency">{{currency}}</span></div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tour-details_summary">
+                                            <div class="tour-details_summary_line">
+                                                <div class="lbl">{{ ml.processingFee | ml }}</div>
+                                                <div class="val">{{ item.processingFee | currency:exchangeRate | number:'1.2-2' }} <span class="currency">{{currency}}</span></div>
+                                            </div>
+                                        </div>
+
+										<div class="tour-details_summary">
+                                            <div class="tour-details_summary_line">
+                                                <div class="lbl">{{ ml.total | ml }}</div>
+                                                <div class="val">{{ item.totalCost | currency:exchangeRate | number:'1.2-2' }} <span class="currency">{{currency}}</span></div>
+                                            </div>
+                                            <div class="tour-details_summary_line" *ngIf="currency === '$'">
+					                            <div class="lbl">({{ ml.approx | ml }}:</div>
+					                            <div class="val">{{ item.totalCost | number:'1.2-2' }} jod</div>
+					                        </div>
+                                        </div>
+
+
+
+										<hr>
+
+										<p>{{ ml.leave_info | ml }}</p>
+
+										<div class="row">
+											<div class="col-xs-12">
+												<div class="form-group">
+													<label for="">
+														{{ ml.name | ml }}
+													</label>
+													<input type="text" class="form-control" [(ngModel)]="primaryContact.title" [ngModelOptions]="{standalone: true}">
+												</div>
+											</div>
+											<div class="col-xs-12">
+												<div class="form-group">
+													<label for="">
+														{{ ml.phone | ml }}
+													</label>
+													<input type="text" class="form-control" [(ngModel)]="primaryContact.phone" [ngModelOptions]="{standalone: true}">
+												</div>
+											</div>
+											<div class="col-xs-12">
+												<div class="form-group">
+													<label for="">
+														{{ ml.email | ml }}
+													</label>
+													<input type="email" class="form-control" [(ngModel)]="primaryContact.email" [ngModelOptions]="{standalone: true}">
+												</div>
+											</div>
+										</div>
+
+										<div class="text-center widget_submit">
+											<button type="submit" class="btn btn-danger btn-lg" (click)="submit(); $event.stopPropagation()">
+												{{ ml.submitPayment | ml }}
+											</button>
+										</div>
+
+
+                                    </form>
+                                </footer>
+
+                            </aside>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container" [class.hidden]=" !submitted ">
+		            <h1>{{ ml.orderConfirmHeader | ml }}</h1>
+		            {{ ml.orderConfirm | ml }} <strong>{{ item.hrid }}</strong>
+		    </div>
+
+        </div>

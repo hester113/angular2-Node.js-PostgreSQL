@@ -1,0 +1,36 @@
+<form role="form" class="contact-form dark-form animated-form" (ngSubmit)="submit($event)">
+    <p class="footer-title">{{ ml.askUsQuestion | ml }}</p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input name="contactName" required type="text" class="form-control" id="contactName" [(ngModel)]="name">
+                <label for="contactName">
+                    {{ ml.cfName | ml }}
+                </label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <input name="contactEmail" required type="email" class="form-control" id="contactEmail" [(ngModel)]="email">
+                <label for="contactEmail">
+                    {{ ml.cfEmail | ml }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <textarea name="contactMessage" class="form-control" id="contactMessage" cols="30" rows="3" [(ngModel)]="message"></textarea>
+                <label for="contactMessage">
+                    {{ ml.cfMessage | ml }}
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary btn-ghost">
+        {{ ml.cfSend | ml }}
+    </button>
+</form>

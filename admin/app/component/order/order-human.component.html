@@ -1,0 +1,77 @@
+<div class="uk-grid">
+	<div class="uk-width-1-3">
+		<div class="uk-width-1-1">
+			<label class="uk-form-label uk-width-1-1">Name</label>
+			<div class="uk-form-controls">
+				<input class="uk-width-1-1" type="text" [(ngModel)]="item.title">
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-3">
+		<div class="uk-width-1-1">
+			<label class="uk-form-label uk-width-1-1">Nationality</label>
+			<div class="uk-form-controls">
+				<select name="type" [(ngModel)]="item.nationality">
+					<option *ngFor="let nationalityItem of nationalityList" [ngValue]="nationalityItem">{{ nationalityItem.title | ml:'en' }}</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-3">
+		<div class="uk-width-1-1">
+			<label class="uk-form-label uk-width-1-1">Date of birth</label>
+			<div class="uk-form-controls">
+				<input #dobNode class="uk-width-1-1" type="text" [value]="item.dob | date: 'dd.MM.yyyy'">
+				<span *ngIf="item.age >= 200">Adult</span>
+				<span *ngIf="item.age < 200">{{ item.age }} years</span>
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-3 uk-margin-top">
+		<div class="uk-width-1-1">
+			<label class="uk-form-label uk-width-1-1">Passport number</label>
+			<div class="uk-form-controls">
+				<input class="uk-width-1-1" type="text" [(ngModel)]="item.passport">
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-3 uk-margin-top">
+		<div class="uk-width-1-1">
+			<label class="uk-form-label uk-width-1-1">Phone</label>
+			<div class="uk-form-controls">
+				<input class="uk-width-1-1" type="text" [(ngModel)]="item.phone">
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-3 uk-margin-top">
+		<div class="uk-width-1-1">
+			<label class="uk-form-label uk-width-1-1">Email</label>
+			<div class="uk-form-controls">
+				<input class="uk-width-1-1" type="email" [(ngModel)]="item.email">
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-1 uk-grid uk-margin-top">
+		<div class="uk-width-8-10">
+			<h4 class="tm-article-subtitle">Tickets</h4>
+		</div>
+		<div class="uk-width-2-10 uk-form-file">
+			<a class="uk-align-right admin-cursor-pointer">
+				<i class="uk-icon uk-icon-plus-circle uk-margin-small-right"></i>
+				<u>Add Ticket</u>
+			</a>
+			<input type="file" accept="application/pdf" (change)="addTicket($event.target)">
+		</div>
+	</div>
+	<div class="uk-width-1-1 uk-margin-top">
+		<ul class="uk-list uk-list-line uk-width-1-1">
+			<li *ngFor="let file of item.tickets; let i = index;" class="uk-width-1-1 uk-form uk-form-stacked uk-form-controls">
+				<span class="uk-margin-right">#{{ i + 1}}</span>
+				<label>Title:</label>
+				<input class="uk-form-width-large uk-margin-right" type="text" [(ngModel)]="file.title">
+				<a class="uk-button" [href]="file.link" target="_blank">Download</a>
+				<i class="uk-margin-large-left uk-icon-trash admin-cursor-pointer" (click)="deleteTicket(file); $event.stopPropagation()"></i>
+			</li>
+		</ul>
+	</div>
+</div>

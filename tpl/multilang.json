@@ -1,0 +1,647 @@
+{
+	"phone_header": {
+		"en": "7043670 79 962+",
+		"ar": "7043670 79 962+"
+	},
+
+	"signUp": {
+		"en": "Sign up",
+		"ar": "أبدا الاشتراك الان"
+	},
+
+	"signIn": {
+		"en": "Sign in",
+		"ar": "تسجيل الدخول"
+	},
+
+	"ferryBookingAgency": {
+		"en": "Ferry booking agency",
+		"ar": "موقع حجز القوارب والعبارات مباشره بدون وسيط"
+	},
+
+	"subtitle": {
+		"en": "Your road between Jordan, Egypt and Saudi Arabia",
+		"ar": "طريقك البحري بين الاردن ومصر والسعودية"
+	},
+
+	"passengerInfo": {
+		"en": "Passenger Info",
+		"ar": "معلومات المسافرون"
+	},
+
+	"contactUs": {
+		"en": "Contact Us",
+		"ar": "اتصل بنا"
+	},
+
+	"tripTypeOneway": {
+		"en": "One way",
+		"ar": "تذاكر الاتجاه الواحد -الذهاب فقط"
+	},
+
+	"tripTypeRound": {
+		"en": "Round Trip",
+		"ar": "تذاكر الاتجاهين - ذهاب وعوده"
+	},
+
+	"tripTypePackage": {
+		"en": "Tourist Package",
+		"ar": "الرحلات السياحيه"
+	},
+
+	"routeFrom": {
+		"en": "Route from",
+		"ar": "الطريق من"
+	},
+
+	"routeTo": {
+		"en": "Route to",
+		"ar": "الطريق إلى"
+	},
+
+	"dateOfDeparture": {
+		"en": "Date of departure",
+		"ar": "موعد المغادرة"
+	},
+
+	"dateOfReturn": {
+		"en": "Date of return",
+		"ar": "تاريخ العودة"
+	},
+
+	"anyDate": {
+		"en": "Any date",
+		"ar": "غير مقيده بتاريخ"
+	},
+
+	"vehicle": {
+		"en": "Vehicle",
+		"ar": "هل لديك مركبه"
+	},
+
+	"none": {
+		"en": "None",
+		"ar": "لا يوجد"
+	},
+
+	"checkAvailability": {
+		"en": "CHECK AVAILABILITY",
+		"ar": "احجز الان"
+	},
+
+	"ticketReservation": {
+		"en": "Ticket reservation",
+		"ar": "حجز تذكرة"
+	},
+
+	"ticketReservationDescr": {
+		"en": "Some text describing important info. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex ercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"ar": "عزيزي المسافر يرجى تعبئه البيانات الصحيحه للمسافرين وأختيار طريقه الدفه المناسبه , وبما يتعلق بمواعيد مغادره العبارات و القوارب ستتوفر في جدول مواعيد المغادره اليوميه, جميع تاذكرنا صلاحه لمده 3 أشهر من تاريخ الحجز وغير مقيده تاريخ معين للسفر خلال تلك الفتره ,سيتم أرسال رساله تأكيد الحجز من خلال الايميل الخاص بك ونتمنى لكم رحله سعيده "
+	},
+
+	"newSearch": {
+		"en": "New Search",
+		"ar": "بحث جديد"
+	},
+
+	"passenger": {
+		"en": "Passenger",
+		"ar": "المسافر"
+	},
+
+	"primaryContact": {
+		"en": "Primary contact",
+		"ar": "معلومات المسافر الأساسيه"
+	},
+
+	"addPassenger": {
+		"en": "Add passenger",
+		"ar": "إضافة الركاب"
+	},
+
+	"paymentDetails": {
+		"en": "Enter your payment details",
+		"ar": "إدخال تفاصيل الدفع الخاصة بك"
+	},
+
+	"cardType": {
+		"en": "CARD TYPE",
+		"ar": "أختار نوع بطاقه الائتمان"
+	},
+
+	"cardNumber": {
+		"en": "CARD NUMBER",
+		"ar": "رقم البطاقة"
+	},
+
+	"cardholderName": {
+		"en": "CARDHOLDER NAME",
+		"ar": "إسم صاحب البطاقة"
+	},
+
+	"validThru": {
+		"en": "VALID THRU",
+		"ar": "صالح حتى"
+	},
+
+	"cvv": {
+		"en": "CVV",
+		"ar": "CVV"
+	},
+
+	"submitPayment": {
+		"en": "Reserve now",
+		"ar": "أحجز الأن"
+	},
+
+	"arabTravelCopyright": {
+		"en": "© Arab Travel, 2017",
+		"ar": "© Arab Travel, 2017 AR"
+	},
+
+	"orderConfirm": {
+		"en": "Your order have been successfully created. Please, wait until our manager confirms it. You will recieve a ticket that you can print.",
+		"ar": "Your order have been successfully created. Please, wait until our manager confirms it. You will recieve a ticket that you can print."
+	},
+
+	"emailOrderConfirmTitle": {
+		"en": "Order confirm",
+		"ar": "تأكيد الحجز"
+	},
+
+	"emailNewUserTitle": {
+		"en": "New user created",
+		"ar": "تم تسجيل مستخدم جديد"
+	},
+
+	"whyToBookOnline": {
+		"en": "Why to Book Online",
+		"ar": "لماذا تحجز هنا"
+	},
+
+	"moreChoice": {
+		"en": "More Choice",
+		"ar": "خيارات أكثر"
+	},
+
+	"moreChoiceText": {
+		"en": "Arab Travel features the widest selection of ferry routes giving you flexibility and choice as well as access to the best ferry deals around..",
+		"ar": "رغبات المسافرين متنوعه وعديده , نحن هنا نقدم لكم خدمه مباشره من خلال المصدر دون وجود الوسيط مما يتيح للمسافرين الحصول على جميع العروض المتاحه  بما يتناسب مع أحتياجاتكم"
+	},
+
+	"betterDeals": {
+		"en": "Better Deals",
+		"ar": "عروض أفضل"
+	},
+
+	"betterDealsText": {
+		"en": "You can compare all suitable ferry crossings in our quick and easy search to find the cheapest ferry fares at the time you want to travel!",
+		"ar": "نحن نقدم لك الخدمه للأطلاع على كافه المشغلين للقوارب والرحلات السياحيه للتمكن من أختيار الرحلات المناسبه"
+	},
+
+	"saveMoney": {
+		"en": "Save Money",
+		"ar": "وفر بمال"
+	},
+
+	"saveMoneyText": {
+		"en": "Best price guaranteed, you are getting the lowest possible price at the time of booking – guaranteed.",
+		"ar": "نضمن لك أقل الاسعار , وفي حاله توفر سعر أقل من سعرنا المعلن يمكن الأتصال بنا بشكل مباشر لتحقق من الامر"
+	},
+
+	"howWeWork": {
+		"en": "How we work",
+		"ar": "كيف نعمل"
+	},
+
+	"howWeWork1": {
+		"en": "Fill the form above and check your options and the availability",
+		"ar": "أختر الخيارات المناسبه للبحث عن العرض الأفضل وحدد نقاط السفر والعوده "
+	},
+
+	"howWeWork2": {
+		"en": "Enter your personal information and reserve a ticket123123",
+		"ar": "قم بملء بياناتك الشخصيه وأختر طريقه الدفع المناسبه ثم  أضغط  تأكيد الحجز"
+	},
+
+	"howWeWork3": {
+		"en": "Get your ticket on your email and in your personal account on the site",
+		"ar": "سنقوم التحقق من البيانات المسجله وتنفيذ عمليه الحجز مباشره من خلال الموقع وتأكيد الحجز من خلال رساله للأيميل الشخصي"
+	},
+
+	"howWeWork4": {
+		"en": "Print it and use it! Our ferries tickets are open-date for 3 months to use",
+		"ar": "طباعه التذكره وأستخدمها في الموعد المحدد , غالبا تذاكرنا غير مقيده بتاريخ سفر معين فهي صلاحيه لغايه 3 أشهر من تاريخ الحجز"
+	},
+
+	"partners1": {
+		"en": "We are the partners of AB Maritime —",
+		"ar": "نحن شركاء شركه الجسر العربي للملاحه البحريه"
+	},
+
+	"partners2": {
+		"en": "best maritime carrier in the red sea region and beyond",
+		"ar": "أكبر وأفضل شركه ملاحيه على مستوى البحر الأحمر "
+	},
+
+	"connecting1": {
+		"en": "Connecting",
+		"ar": "نحن نربط"
+	},
+
+	"connecting2": {
+		"en": "Arab Asia and Arab Africa together",
+		"ar": "القاره الاسيويه والافريقيه للنسهل سفركم من خلال البحر الاحمر"
+	},
+
+	"connecting3": {
+		"en": "See our <a href=''>Routes</a> and <a href=''>Schedule</a>",
+		"ar": "See our <a href=''>Routes</a> and <a href=''>مواعيد المغادره</a>"
+	},
+
+	"checkTP": {
+		"en": "Check our Tourist Packages",
+		"ar": "أستمتع بعروضنا السياحيه"
+	},
+
+	"checkTPText": {
+		"en": "Enjoy your vacation and we will take care of everything else. Our pre-built Tourist Packages include tickets, hotel and tours. And even something more.",
+		"ar": "نحن هنا نضمن لكم أجمل الاوقات والرحلات السياحيه"
+	},
+
+	"orderDetails": {
+		"en": "Order details",
+		"ar": "تفاصيل الحجز"
+	},
+
+	"ticketsPrice": {
+		"en": "Tickets price",
+		"ar": "مجموع أسعار التذاكر"
+	},
+
+	"processingFee": {
+		"en": "Processing fee",
+		"ar": "بدل الخدمه"
+	},
+
+	"total": {
+		"en": "Total",
+		"ar": "المجموع"
+	},
+
+	"approx": {
+		"en": "Approx. price rate",
+		"ar": "السعر حسب سعر الصرف التقريبي"
+	},
+
+	"youHaveChosen": {
+		"en": "You have chosen",
+		"ar": "تم الاختيار"
+	},
+
+	"nextSteps": {
+		"en": "We will contact you as soon as possible and inform you on next steps.",
+		"ar": "سيتم الاتصال بكم قريبا لأبلاغكم على الخطوات التاليه"
+	},
+
+	"name": {
+		"en": "Name",
+		"ar": "الاسم"
+	},
+
+	"nationality": {
+		"en": "Nationality",
+		"ar": "الجنسيه"
+	},
+
+	"dateOfBirth": {
+		"en": "Date of birth",
+		"ar": "تاريخ الميلاد"
+	},
+
+	"passportNumber": {
+		"en": "Passport number",
+		"ar": "رقم الجواز"
+	},
+
+	"phone": {
+		"en": "Phone",
+		"ar": "رقم الهاتف/الموبايل"
+	},
+
+	"email": {
+		"en": "Email",
+		"ar": "عنوان البريد الإلكتروني"
+	},
+
+	"message": {
+		"en": "Message",
+		"ar": "الرساله"
+	},
+
+	"myOrders": {
+		"en": "My orders",
+		"ar": "حجوزاتي"
+	},
+
+	"order": {
+		"en": "Order",
+		"ar": "الحجز"
+	},
+
+	"date": {
+		"en": "Date",
+		"ar": "التاريخ"
+	},
+
+	"route": {
+		"en": "Route",
+		"ar": "الطريق"
+	},
+
+	"price": {
+		"en": "Price",
+		"ar": "السعر"
+	},
+
+	"status": {
+		"en": "Status",
+		"ar": "الحاله"
+	},
+
+	"cancel": {
+		"en": "Cancel",
+		"ar": "الغاء"
+	},
+
+	"view": {
+		"en": "View",
+		"ar": "عرض"
+	},
+
+	"ticketID": {
+		"en": "Ticket ID",
+		"ar": "رقم الحجز"
+	},
+
+	"passengerName": {
+		"en": "Passenger name",
+		"ar": "أسم المسافر"
+	},
+
+	"passengerInfo": {
+		"en": "passengerInfo",
+		"ar": "معلومات المسافر"
+	},
+
+	"print": {
+		"en": "Print",
+		"ar": "الطباعه"
+	},
+
+	"printTicket": {
+		"en": "Print ticket",
+		"ar": "طباعه التذكره"
+	},
+
+	"allTripsFrom": {
+		"en": "All trips from",
+		"ar": "جميع العروض المتاحه من"
+	},
+
+	"sortBy": {
+		"en": "Sort by",
+		"ar": "الفرز بستخدام"
+	},
+
+	"tourIncludes": {
+		"en": "Tour includes",
+		"ar": "الرحله تشمل"
+	},
+
+	"ferryFrom": {
+		"en": "Ferry from",
+		"ar": "القارب من "
+	},
+
+	"hotel": {
+		"en": "Hotel",
+		"ar": "الفندق"
+	},
+
+	"from": {
+		"en": "per person",
+		"ar": "للشخص الواحد"
+	},
+
+	"andBack": {
+		"en": "and back",
+		"ar": "والعوده"
+	},
+
+	"tickets2way": {
+		"en": "Tickets 2 way",
+		"ar": "تذكره الذهاب والعوده"
+	},
+
+	"bookNow": {
+		"en": "Book Now",
+		"ar": "أحجز الأن"
+	},
+
+	"valid": {
+		"en": "date",
+		"ar": "التاريخ"
+	},
+
+	"leave_info": {
+		"en": "Leave your info and we will contact you as soon as possible",
+		"ar": "ترك المعلومات الخاصة بك، ونحن سوف نتصل بك في أقرب وقت ممكن"
+	},
+
+	"adults": {
+		"en": "Adults",
+		"ar": "عدد البالغين"
+	},
+
+	"kids": {
+		"en": "Kids",
+		"ar": "عدد الاطفال"
+	},
+
+	"kidsAge": {
+		"en": "Kids age",
+		"ar": "عمر الطفل"
+	},
+
+	"adult": {
+		"en": "Adult",
+		"ar": "شخص بالغ"
+	},
+
+	"USD": {
+		"en": "USD",
+		"ar": "دولار أمريكي"
+	},
+
+	"JOD": {
+		"en": "JOD",
+		"ar": "دينار أردني"
+	},
+
+	"SAR": {
+		"en": "SAR",
+		"ar": "ريال سعودي"
+	},
+
+	"EGP": {
+		"en": "EGP",
+		"ar": "جنيه مصري"
+	},
+
+	"curLang": {
+		"en": "English",
+		"ar": "عربي"
+	},
+
+	"year": {
+		"en": "yr",
+		"ar": "سنة"
+	},
+
+	"years": {
+		"en": "yrs",
+		"ar": "سنوات"
+	},
+
+	"enterKidsAge": {
+		"en": "Please fill this field by the kids age as it is written on the travel document:",
+		"ar": "أعمار الأطفال عند تسجيل المغادرة"
+	},
+
+	"currencyExchange": {
+		"en": "choose your currency",
+		"ar": "اختر عملتك"
+	},
+
+	"chargeNote": {
+		"en": "Your trip will be charged in JOD",
+		"ar": "سيتم احتساب سعر التذكرة بدينار الاردني"
+	},
+
+	"cfName": {
+		"en": "Name",
+		"ar": "الاسم"
+	},
+
+	"cfEmail": {
+		"en": "Email",
+		"ar": "الايميل"
+	},
+
+	"cfMessage": {
+		"en": "Message",
+		"ar": "الرساله"
+	},
+
+	"cfSend": {
+		"en": "Send",
+		"ar": "أرسل"
+	},
+
+	"askUsQuestion": {
+		"en": "Ask us a question",
+		"ar": "تواصل معنا "
+	},
+
+	"signUpWithAT": {
+		"en": "Sign up with ArabTravel",
+		"ar": "اشترك مع ArabTravel.jo"
+	},
+
+	"EMCh": {
+		"en": "Easily make changes to your bookings:",
+		"ar": "أدخل التغييرات على حجوزاتك بسهولة"
+	},
+
+	"EMCh2": {
+		"en": "Change bookings",
+		"ar": "تغيير الحجز"
+	},
+
+	"EMCh3": {
+		"en": "Personalise your deals",
+		"ar": "خصص عروضك بنفسك"
+	},
+
+	"EMCh4": {
+		"en": "Book faster",
+		"ar": "احجز أسرع"
+	},
+
+	"signInForm": {
+		"en": "Sign In Form",
+		"ar": "تسجيل الدخول"
+	},
+
+	"login": {
+		"en": "User Email",
+		"ar": "عنوان البريد الإلكتروني"
+	},
+
+	"password": {
+		"en": "Password",
+		"ar": "كلمة مرور ArabTravel.jo"
+	},
+
+	"night1": {
+		"en": "night",
+		"ar": "ليلة واحدة"
+	},
+
+	"night2": {
+		"en": "nights",
+		"ar": "ليلتان"
+	},
+
+	"night3": {
+		"en": "nights",
+		"ar": "ليالي"
+	},
+
+	"day1": {
+		"en": "day",
+		"ar": "يوم واحد"
+	},
+
+	"day2": {
+		"en": "days",
+		"ar": "يومين"
+	},
+
+	"day3": {
+		"en": "days",
+		"ar": "ايام"
+	},
+
+	"forgotPassword": {
+		"en": "Forgot password",
+		"ar": "Forgot password"
+	},
+
+	"pwRecoverText": {
+		"en": "New password will be sent on your email",
+		"ar": "New password will be sent on your email"
+	},
+
+	"recover": {
+		"en": "Recover",
+		"ar": "Recover"
+	},
+
+	"emailNewPassword": {
+		"en": "New password",
+		"ar": "تم تسجيل مستخدم جديد"
+	}
+}
+

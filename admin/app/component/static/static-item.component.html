@@ -1,0 +1,53 @@
+<div class="uk-grid">
+	<div class="uk-width-3-4 uk-margin-bottom">
+		<h2>Static page <span *ngIf="item">&laquo;{{ item.title | ml:'en' }}&raquo;</span></h2>
+	</div>
+	<div class="uk-width-1-4 uk-margin-bottom">
+		<button class="uk-button uk-button-primary uk-align-right" (click)="back()"><i class="uk-icon-arrow-left"></i>&emsp;Back</button>
+	</div>
+	<div class="uk-width-1-1 uk-form uk-form-stacked">
+		<div class="uk-grid">
+			<div class="uk-width-1-1">
+				<label class="uk-button admin-button" [class.uk-active]="item.enable">
+					<span>Enable</span>
+					<input  class="uk-hidden" type="checkbox" [(ngModel)]="item.enable">
+				</label>
+			</div>
+			<div class="uk-width-7-10 uk-margin-top">
+				<div class="uk-width-1-1">
+					<label class="uk-form-label uk-width-1-1">URL</label>
+					<div class="uk-form-controls">
+						<input class="uk-width-1-1" type="text" placeholder="URL" [(ngModel)]="item.url">
+					</div>
+				</div>
+				<div class="uk-width-1-1 uk-margin-top">
+					<label class="uk-form-label uk-width-1-1">Title</label>
+					<mlinput [(value)]="item.title" [size]="'medium'"></mlinput>
+				</div>
+				<div class="uk-width-1-1 uk-margin-top">
+					<label class="uk-form-label uk-width-1-1">Description</label>
+					<mlinput [(value)]="item.description" [size]="'medium'"></mlinput>
+				</div>
+			</div>
+			<div class="uk-width-3-10 uk-margin-top">
+				<label class="uk-form-label uk-width-1-1">OG Image<i class="uk-icon-times uk-align-right admin-cursor-pointer" (click)="item.image = null"></i></label>
+				<div class="uk-form-file">
+					<img class="uk-thumbnail admin-cursor-pointer" [src]="item.image && item.image.link || '/placeholder_200x100.svg'">
+					<input type="file" accept="image/*" (change)="setImage($event.target)">
+				</div>
+			</div>
+			<div class="uk-width-1-1 uk-margin-top">
+				<h4 class="tm-article-subtitle">Content</h4>
+				<div class="uk-width-1-1">
+					<mleditor [(value)]="item.content"></mleditor>
+				</div>
+			</div>
+			<div class="uk-width-1-1 uk-margin-top">
+				<button type="submit" class="uk-button uk-button-success uk-align-right" [disabled]="!valid" (click)="submit()"><i class="uk-icon-floppy-o"></i>&emsp;Submit</button>
+			</div>
+			<!-- <div class="uk-width-1-1 uk-margin-top">
+				<p>DEBUG: {{ item | json }}</p>
+			</div> -->
+		</div>
+	</div>
+</div>

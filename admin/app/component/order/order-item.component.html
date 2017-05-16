@@ -1,0 +1,126 @@
+<div class="uk-grid">
+	<div class="uk-width-3-4 uk-margin-bottom">
+		<h2>Order {{item.date | date: 'dd.MM.yyyy HH:mm:ss' }}</h2>
+	</div>
+	<div class="uk-width-1-4 uk-margin-bottom">
+		<button class="uk-button uk-button-primary uk-align-right" (click)="back()"><i class="uk-icon-arrow-left"></i>&emsp;Back</button>
+	</div>
+	<div class="uk-width-1-1 uk-form uk-form-stacked">
+		<div class="uk-grid">
+			<div class="uk-width-7-10 uk-form-controls">
+				<label class="uk-button admin-button" [class.uk-active]="item.enable">
+					<span>Enable</span>
+					<input  class="uk-hidden" type="checkbox" [(ngModel)]="item.enable">
+				</label>
+				<div class="uk-button-group uk-margin-left">
+					<button *ngFor="let type of types" class="uk-button admin-button" [class.uk-active]="item.type === type" (click)="setType(type); $event.preventDefault()"><i [class]="type.icon"></i>&nbsp;{{ type.title | ml:'en' }}</button>
+				</div>
+				<select class="uk-margin-left" name="type" [(ngModel)]="item.status">
+					<option *ngFor="let statusItem of statusList" [ngValue]="statusItem">{{ statusItem.title | ml:'en' }}</option>
+				</select>
+			</div>
+			<div class="uk-width-3-10 uk-margin-top">
+				<b>ID:</b><span>{{ item.hrid }}</span>
+			</div>
+			<div class="uk-width-7-10 uk-margin-top">
+				<label class="uk-form-label uk-width-1-1">Description</label>
+				<div class="uk-form-controls">
+					<input class="uk-width-1-1" type="text" [(ngModel)]="item.description">
+				</div>
+			</div>
+			<div class="uk-width-3-10 uk-margin-top">
+				<label class="uk-form-label uk-width-1-1">User</label>
+				<div class="uk-form-controls" *ngIf="item.owner">
+					<a [attr.href]="'/users/' + item.owner.id.uuid"  target="_blank">{{item.owner.title}}</a>
+				</div>
+				<div class="uk-form-controls" *ngIf="item.owner">
+					<b>Phone:</b>&nbsp;{{ item.owner.phone }}
+				</div>
+				<div class="uk-form-controls" *ngIf="item.owner">
+					<b>E-mail:</b>&nbsp;{{ item.owner.email }}
+				</div>
+			</div>
+
+			<div class="uk-width-1-1 uk-grid uk-margin-top">
+				<div class="uk-width-1-10">
+					<h3 class="tm-article-subtitle">Payment</h3>
+				</div>
+				<div class="uk-width-9-10 uk-form-controls">
+					<select name="type" [(ngModel)]="item.paymentType">
+						<option *ngFor="let paymentTypeItem of paymentTypeList" [ngValue]="paymentTypeItem">{{ paymentTypeItem.title | ml:'en' }}</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="uk-width-1-1  uk-grid uk-margin-top" [class.uk-hidden]="item.paymentType.id !== 'card'">
+				<div class="uk-width-2-10">
+					<label class="uk-form-label uk-width-1-1">Card number</label>
+					<div class="uk-form-controls">
+						<input class="uk-width-1-1" type="text" placeholder="Card number" [(ngModel)]="item.card.number">
+						<span>({{item.card.type || ''}})</span>
+					</div>
+				</div>
+				<div class="uk-width-3-10">
+					<label class="uk-form-label uk-width-1-1">Cardholder</label>
+					<div class="uk-form-controls">
+						<input class="uk-width-1-1" type="text" placeholder="Cardholder" [(ngModel)]="item.card.cardholder">
+					</div>
+				</div>
+				<div class="uk-width-2-10">
+					<label class="uk-form-label uk-width-1-1">Month/Year</label>
+					<div class="uk-form-controls">
+						<select [(ngModel)]="item.card.validMonth">
+							<option *ngFor="let month of months" [ngValue]="month">{{month}}</option>
+						</select>
+						<select [(ngModel)]="item.card.validYear">
+							<option *ngFor="let year of years" [ngValue]="year">{{year}}</option>
+						</select>
+					</div>
+				</div>
+				<div class="uk-width-1-10">
+					<label class="uk-form-label uk-width-1-1">CVV</label>
+					<div class="uk-form-controls">
+						<input class="uk-width-1-1" type="number" min="100" max="999" placeholder="CVV" [(ngModel)]="item.card.cvv">
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-width-1-1 uk-margin-top">
+				<h3 class="tm-article-subtitle">Global paremetrs</h3>
+			</div>
+			<div class="uk-width-2-10">
+				<label class="uk-form-label uk-width-1-1">Processing fee, JD</label>
+				<div class="uk-form-controls">
+					<input class="uk-width-1-1" type="number" min="0" [(ngModel)]="item.processingFee">
+				</div>
+			</div>
+			<div class="uk-width-2-10">
+				<label class="uk-form-label uk-width-1-1">Egyptian mark up, JD</label>
+				<div class="uk-form-controls">
+					<input class="uk-width-1-1" type="number" min="0" [(ngModel)]="item.egyptianMarkUp">
+				</div>
+			</div>
+			<div class="uk-width-2-10">
+				<label class="uk-form-label uk-width-1-1">Exchange, $ per JD</label>
+				<div class="uk-form-controls">
+					<input class="uk-width-1-1" type="number" min="0" [(ngModel)]="item.exchangeRate">
+				</div>
+			</div>
+
+			<div class="uk-width-1-1" *ngIf="item.type.id === 'trip'">
+				<order-trip [(order)]="item"></order-trip>
+			</div>
+
+			<div class="uk-width-1-1" *ngIf="item.type.id === 'package'">
+				<order-package [(order)]="item"></order-package>
+			</div>
+
+			<div class="uk-width-1-1 uk-margin-top">
+				<button type="submit" class="uk-button uk-button-success uk-align-right" (click)="submit()"><i class="uk-icon-floppy-o"></i>&emsp;Submit</button>
+			</div>
+			<!-- <div class="uk-width-1-1 uk-margin-top">
+				<p>DEBUG: {{ item | json }}</p>
+			</div> -->
+		</div>
+	</div>
+</div>
